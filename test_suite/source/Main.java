@@ -15,8 +15,11 @@ public class Main {
 			System.out.print("|     4. 종      료      |\n");
 			System.out.print("  =====================  \n");
 
+			System.out.println("");
 			System.out.print("원하는 번호를 선택하세요 : ");
 			int key = sc.nextInt();
+			
+			System.out.print("────────────────────────────\n");
 			if (key == 4) {
 				System.out.println("프로그램을 종료합니다.");
 				break;
