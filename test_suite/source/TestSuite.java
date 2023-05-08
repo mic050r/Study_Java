@@ -21,16 +21,22 @@ public class TestSuite {
 	public void PerformanceScore() {
 		System.out.print("과목을 입력하시오 : ");
 		subject_Name = sc.next();
-		System.out.print("수행 비율 : "); per = sc.nextInt();
-		System.out.print("중간 비율 : "); mid = sc.nextInt();
-		System.out.print("기말 비율 : "); fin = sc.nextInt();
+		System.out.print("수행 비율 : ");
+		per = sc.nextInt();
+		System.out.print("중간 비율 : ");
+		mid = sc.nextInt();
+		System.out.print("기말 비율 : ");
+		fin = sc.nextInt();
 		System.out.println("");
-		
-		System.out.print("수행 점수 : "); per_sco = sc.nextInt();
-		System.out.print("중간 점수 : "); mid_sco = sc.nextInt();
-		System.out.print("기말 점수 : "); fin_sco = sc.nextInt();
-		
-		score = ((mid_sco + fin_sco)/2)*((mid+fin)*0.01) + per_sco;
+
+		System.out.print("수행 점수 : ");
+		per_sco = sc.nextInt();
+		System.out.print("중간 점수 : ");
+		mid_sco = sc.nextInt();
+		System.out.print("기말 점수 : ");
+		fin_sco = sc.nextInt();
+
+		score = ((mid_sco + fin_sco) / 2) * ((mid + fin) * 0.01) + per_sco;
 		System.out.println("총 점수는 " + score);
 		System.out.println("");
 	}
@@ -42,10 +48,11 @@ public class TestSuite {
 		double score[] = new double[subject_Num];
 		for (int i = 0; i < score.length; i++) {
 			System.out.print((i + 1) + "번째 점수 입력 : ");
-			score[i] = sc.nextInt();
+			score[i] = sc.nextDouble();
 			total += score[i];
 		}
 		avg = total / subject_Num;
-		System.out.printf("평균은 %2.lf입니다.", avg);
+		System.out.print("평균은 " + Math.round(avg* 100) / 100.0 + "입니다.");
+		System.out.println("\n"); 
 	}
 }
